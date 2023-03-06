@@ -7,17 +7,17 @@ function word_edit(mass){
     }
 
 var button = document.getElementById('But');
-button.addEventListener("click",getmass);
+button.addEventListener("click",main);
 
 
-function getmass(){
+function main(){
     var str = document.getElementById('Arr').value;
+    var out = document.getElementById('output');
     var regex = /^[a-zA-Z\s]+$/; 
     if(regex.test(str) === false) {
-        console.log("Error: Input words, which contain a-z or A-Z");
+        out.value="Error: Input words, which contain a-z or A-Z";
     } else {
         var mass = str.split(" ");
-        console.log(mass);
-        console.log(word_edit(mass));
+        out.value=log(word_edit(mass));
     }
 }
