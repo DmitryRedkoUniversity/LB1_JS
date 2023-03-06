@@ -12,12 +12,15 @@ button.addEventListener("click",main);
 
 function main(){
     var str = document.getElementById('Arr').value;
-    var out = document.getElementById('output');
-    var regex = /^[a-zA-Z\s]+$/; 
+    var out = document.getElementById('out');
+    
+    var regex = /^[а-яa-zА-ЯA-Z\s]+$/; 
     if(regex.test(str) === false) {
-        out.value="Error: Input words, which contain a-z or A-Z";
+        out.value="Error: enter words consisting of a-z(A-Z) or а-я(А-Я)";
     } else {
         var mass = str.split(" ");
-        out.value=log(word_edit(mass));
+        out.value=word_edit(mass);
+
+
     }
 }
