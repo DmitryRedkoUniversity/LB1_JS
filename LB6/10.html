@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>LB_6</title>
+</head>
+
+<body>
+    <form>
+        <b>10. Создайте функцию, которая принимает две даты и 
+            возвращает количество дней между первой и второй датами.</b>
+        <p class="white">Введите две даты:</p>
+        <input type="text" required pattern="\d{4}/\d{2}/\d{2}" placeholder="start date in format: yyyy/mm/dd"
+            id="date1" style="width:180px">
+        <br>
+        <input type="text" required pattern="\d{4}/\d{2}/\d{2}" placeholder="end date in format: yyyy/mm/dd"
+            id="date2" style="width:180px">
+        <br><br>
+        <input type="button" value="ENTER DATES" id="button">
+        <br><br>
+        <input type="text" value="Output" id="output" style="width:350px; height:30px;">
+        <br><br>
+        <div id="Error"></div>
+    </form>
+    <script src="10.js"></script>
+</body>
+
+</html>

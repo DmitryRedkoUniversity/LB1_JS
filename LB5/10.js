@@ -1,10 +1,10 @@
-function consecutive(num) {
-    console.log(/[0123456789]/.test("in 1992"));
-}
+function reduceEndingPunctuation(str) {
+    return str.replace(/(!+|\?+)$/, (match) => match.slice(-1));
+  }
 
 function main() {
-    let inputNumber = Number(document.getElementById('input').value.replaceAll(' ', ''));
-    document.getElementById('output').value = consecutive(inputNumber)
+    let inputString = document.getElementById('input').value;
+    document.getElementById('output').value = reduceEndingPunctuation(inputString)
 }
 
 let button = document.getElementById('button');
