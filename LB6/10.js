@@ -6,20 +6,14 @@ function getDaysNumber(startDate, endDate) {
     return (treatAsUTC(endDate) - treatAsUTC(startDate)) / (24 * 60 * 60 * 1000);
 }
 
-function validate(date, pattern) {
-    if (!RegExp(pattern).test(date)) {
-        return false;
-    }
-    return true;
-}
-
 function main() {
     let date1Input = document.getElementById('date1');
     let date2Input = document.getElementById('date2');
+
     let div = document.getElementById('Error');
     let result = getDaysNumber(date1Input.value, date2Input.value);
 
-    if (!validate(date1Input.value, date1Input.pattern) || !validate(date2Input.value, date2Input.pattern) || isNaN(result) || result<0) {
+    if (isNaN(result) || result < 0) {
         div.innerHTML = "Некорректный ввод данных";
         return;
     } else {
