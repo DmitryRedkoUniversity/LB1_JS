@@ -8,15 +8,32 @@
 
 <body>
     <form>
-        <b>10.	Напишите программу, которая назначает значения 
+        <b>10. Напишите программу, которая назначает значения
             по умолчанию для всех свойств объекта, которые не заданы.</b>
         <br>
-        <input type="button" value="click" id="button">
-        <br><br>
-        <textarea id = "output" name="textarea" style="width:250px; height:150px;"></textarea>
+        <table>
+            <tr>
+                <td><label for="Name">Имя:</label></td>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td><label for="age">Возраст:</label></td>
+                <td><input type="number" id="age"></td>
+            </tr>
+            <tr>
+                <td><label for="about">Прописка:</label></td>
+                <td><input type="text" id="address"></textarea></td>
+            </tr>
+        </table>
         <br>
+        <input type="button" value="Ввести данные" id="button">
+        <div id="divName"></div>
+        <div id="divAge"></div>
+        <div id="divAddress"></div>
     </form>
     <script src="10.js"></script>
 </body>
 
 </html>
+
+

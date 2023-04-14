@@ -1,26 +1,24 @@
 class Person {
-  constructor(name = 'Unknown', age = 0, gender = 'Unknown') {
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
+  constructor(name = 'Unknown', age = 0, address = 'Unknown') {
+    this.name = name.length != 0 ? name : "Unknown";
+    this.age = age.length != 0 ? age : "Unknown";
+    this.address = address.length != 0 ? address : "Unknown";
   }
 }
 
-function testingOutput(object){
-  let output = document.getElementById('output');
-  output.value += "Person:" + '\n';
-  output.value += "Name: " + object.name + '\n';
-  output.value += "Age: " + object.age + '\n';
-  output.value += "Gender: " + object.gender + '\n\n';
+function OutputParams(object) {
+  document.getElementById('divName').innerHTML = "Имя: " + object.name;
+  document.getElementById('divAge').innerHTML = "Возраст: " + object.age;
+  document.getElementById('divAddress').innerHTML = "Адрес: " + object.address;
 }
 
 function main() {
-  const person1 = new Person('John', 30, "male");
-  const person2 = new Person('Mark', 35);
-  const person3 = new Person();
-  testingOutput(person1);
-  testingOutput(person2);
-  testingOutput(person3);
+  let name = document.getElementById('name').value;
+  let age = document.getElementById('age').value;
+  let address = document.getElementById('address').value;
+
+  const person = new Person(name, age, address);
+  OutputParams(person);
 }
 
 let button = document.getElementById('button');
